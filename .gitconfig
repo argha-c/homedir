@@ -1,0 +1,26 @@
+[user]
+    name = Argha C
+    email = ######
+
+[core]
+    excludesfile = ~/.gitignore
+    editor = vim
+
+[color]
+    ui = auto
+
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    di = diff
+    dc = diff --cached
+    aa = add --all
+    gpr = pull --rebase:
+    # custom log that is a copy of Gary Bernhardt's
+    l  = "!source ~/.githelpers && pretty_git_log"
+    la = !git l --all
+
+    ll  = log --oneline --decorate --graph
+    lla = !git ll --all
+
