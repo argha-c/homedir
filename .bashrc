@@ -14,6 +14,7 @@ export TERM='xterm-256color'
 alias ls='ls -G'
 alias ll='ls -lahG'
 alias vim='nvim'
+ln -s ~/.vim ~/.config/nvim
 
 export LSCOLORS="GxFxCxDxBxEgEdabagacad"
 export GREP_OPTIONS="--color"
