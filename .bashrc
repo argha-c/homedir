@@ -14,6 +14,8 @@ export TERM='xterm-256color'
 alias ls='ls -G'
 alias ll='ls -lahG'
 alias vim='nvim'
+
+# need this for vim bundles to be picked up correctly
 ln -s ~/.vim ~/.config/nvim
 
 export LSCOLORS="GxFxCxDxBxEgEdabagacad"
