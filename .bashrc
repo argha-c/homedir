@@ -4,18 +4,12 @@ source ~/bin/git_completion.bash
 # ~/bin is the location of personal scripts I would like available everywhere
 export PATH="$HOME/bin:$PATH"
 
-# Go 1.8 will default GOPATH to ~/go and I would like to expose the go installed
-# tools everywhere
-export PATH="$HOME/go/bin:$PATH"
-
 # need this set to xterm-256color to get proper color support in vim
 export TERM='xterm-256color'
 
 alias ls='ls -G'
 alias ll='ls -lahG'
 alias vim='nvim'
-
-# need this for vim bundles to be picked up correctly
 ln -s ~/.vim ~/.config/nvim
 
 export LSCOLORS="GxFxCxDxBxEgEdabagacad"
@@ -33,8 +27,10 @@ alias gs="git status"
 alias gpr="git pull --rebase"
 alias asd="ping 8.8.8.8"
 export EDITOR="vim -f"
-
-PS1="\[${VIOLET}\]\\w \[${GREEN}\]? \[${RESET}\]"
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+PS1="\[${RED}\]\\w\[${GREEN}\]\$(parse_git_branch)$ \[${RESET}\]"
 
 if [ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]; then
   source /usr/local/opt/chruby/share/chruby/chruby.sh
