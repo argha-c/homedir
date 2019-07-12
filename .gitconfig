@@ -16,7 +16,7 @@
     di = diff
     dc = diff --cached
     aa = add --all
-    gpr = pull --rebase:
+    gpr = pull --rebase --autostash
     # custom log that is a copy of Gary Bernhardt's
     l  = "!source ~/.githelpers && pretty_git_log"
     la = !git l --all
