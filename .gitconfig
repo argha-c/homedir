@@ -5,7 +5,8 @@
 [core]
     excludesfile = ~/.gitignore
     editor = vim
-
+[branch]
+	autosetuprebase = always
 [color]
     ui = auto
 
