@@ -24,4 +24,6 @@
 
     ll  = log --oneline --decorate --graph
     lla = !git ll --all
-
+    
+    ## Not safe anymore
+    yolo = commit -m "DEAL WITH IT." && git push origin +master 
